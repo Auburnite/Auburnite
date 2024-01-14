@@ -24,7 +24,7 @@ jobs:
                         split_repository: 'Melketa'
 
         steps:
-            -   uses: actions/checkout@v4
+            -   uses: actions/checkout@v3
 
             # no tag
             -
