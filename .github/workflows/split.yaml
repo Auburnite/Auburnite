@@ -1,0 +1,67 @@
+name: 'Packages Split'
+
+on:
+    push:
+        branches:
+            - '*.*'
+        tags:
+            - 'v*'
+env:
+    # 1. for Github split
+    GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
+jobs:
+    packages_split:
+        runs-on: ubuntu-latest
+
+        strategy:
+            fail-fast: false
+            matrix:
+                # define package to repository map
+                package:
+                    -
+                        local_path: 'Component/Melketa'
+                        split_repository: 'Auburnite/Melketa'
+
+        steps:
+            -   uses: actions/checkout@v4
+
+            # no tag
+            -
+                if: "!startsWith(github.ref, 'refs/tags/')"
+                uses: "symplify/monorepo-split-github-action@2.1"
+                with:
+                    # ↓ split "packages/easy-coding-standard" directory
+                    package_directory: 'src/Auburnite/${{ matrix.package.local_path }}'
+
+                    # ↓ into https://github.com/symplify/easy-coding-standard repository
+                    repository_organization: 'auburnite'
+                    repository_name: '${{ matrix.package.split_repository }}'
+
+                    # [optional, with "github.com" as default]
+#                    repository_host: git.private.com:1234
+
+                    # ↓ the user signed under the split commit
+                    user_name: "jmwamser"
+                    user_email: "jwamser@redpandacoding.com"
+
+            # with tag
+            -
+                if: "startsWith(github.ref, 'refs/tags/')"
+                uses: "symplify/monorepo-split-github-action@2.1"
+                with:
+                    tag: ${GITHUB_REF#refs/tags/}
+
+                    # ↓ split "packages/easy-coding-standard" directory
+                    package_directory: 'src/Auburnite/${{ matrix.package.local_path }}'
+
+                    # ↓ into https://github.com/symplify/easy-coding-standard repository
+                    repository_organization: 'auburnite'
+                    repository_name: '${{ matrix.package.split_repository }}'
+
+                    # [optional, with "github.com" as default]
+#                    repository_host: git.private.com:1234
+
+                    # ↓ the user signed under the split commit
+                    user_name: "jmwamser"
+                    user_email: "jwamser@redpandacoding.com"

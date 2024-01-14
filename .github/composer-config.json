@@ -1,0 +1,12 @@
+{
+  "config": {
+    "cache-vcs-dir": "/dev/null",
+    "platform-check": false,
+    "preferred-install": {
+      "*": "dist"
+    },
+    "allow-plugins": {
+      "symfony/flex": true
+    }
+  }
+}
