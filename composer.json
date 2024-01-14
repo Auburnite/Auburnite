@@ -19,7 +19,9 @@
     "config": {},
     "autoload": {
         "psr-4": {
-            "Auburnite\\Auburnite\\": "src/Auburnite/"
+            "Auburnite\\Auburnite\\": "src/Auburnite/",
+            "Auburnite\\Bundle\\": "src/Auburnite/Bundle/",
+            "Auburnite\\Component\\": "src/Auburnite/Component/"
         },
         "exclude-from-classmap": [
             "**/Tests/"
