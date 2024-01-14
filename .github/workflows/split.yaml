@@ -29,7 +29,7 @@ jobs:
                 uses: "symplify/monorepo-split-github-action@main"
                 env:
                     # 1. for Github split
-                    GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+                    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 with:
                     branch: '0.1'
                     # ↓ split "packages/easy-coding-standard" directory
@@ -43,7 +43,7 @@ jobs:
 #                    repository_host: git.private.com:1234
 
                     # ↓ the user signed under the split commit
-                    user_name: "Jordan Wamser"
+                    user_name: "jmwamser"
                     user_email: "jwamser@redpandacoding.com"
 
             # with tag
@@ -52,7 +52,7 @@ jobs:
                 uses: "symplify/monorepo-split-github-action@main"
                 env:
                     # 1. for Github split
-                    GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+                    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 with:
                     tag: ${GITHUB_REF#refs/tags/}
 
