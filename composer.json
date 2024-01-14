@@ -1,0 +1,31 @@
+{
+    "name": "auburnite/auburnite",
+    "description": "The Auburnite components",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jordan Wamser",
+            "email": "jwamser@redpandacoding.com"
+        }
+    ],
+    "provide": {},
+    "require": {
+        "php": ">=8.2"
+    },
+    "replace": {},
+    "require-dev": {},
+    "conflict": {},
+    "config": {},
+    "autoload": {
+        "psr-4": {
+            "Auburnite\\Auburnite\\": "src/Auburnite/"
+        },
+        "exclude-from-classmap": [
+            "**/Tests/"
+        ]
+    },
+    "autoload-dev": {},
+    "repositories": [],
+    "minimum-stability": "dev"
+}
