@@ -21,7 +21,7 @@ jobs:
                 package:
                     -
                         local_path: 'Component/Melketa'
-                        split_repository: 'Auburnite/Melketa'
+                        split_repository: 'Melketa'
 
         steps:
             -   uses: actions/checkout@v4
@@ -35,7 +35,7 @@ jobs:
                     package_directory: 'src/Auburnite/${{ matrix.package.local_path }}'
 
                     # ↓ into https://github.com/symplify/easy-coding-standard repository
-                    repository_organization: 'auburnite'
+                    repository_organization: 'Auburnite'
                     repository_name: '${{ matrix.package.split_repository }}'
 
                     # [optional, with "github.com" as default]
@@ -56,7 +56,7 @@ jobs:
                     package_directory: 'src/Auburnite/${{ matrix.package.local_path }}'
 
                     # ↓ into https://github.com/symplify/easy-coding-standard repository
-                    repository_organization: 'auburnite'
+                    repository_organization: 'Auburnite'
                     repository_name: '${{ matrix.package.split_repository }}'
 
                     # [optional, with "github.com" as default]
