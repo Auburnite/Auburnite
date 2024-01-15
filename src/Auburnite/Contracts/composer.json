@@ -1,0 +1,36 @@
+{
+  "name": "auburnite/contracts",
+  "type": "library",
+  "description": "A set of abstractions extracted out of the Auburnite components",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jordan Wamser",
+      "email": "jmwamser@redpandacoding.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.2"
+  },
+  "require-dev": {},
+  "conflict": {
+    "ext-psr": "<1.1|>=2"
+  },
+  "replace": {
+    "symfony/exception-contracts": "self.version"
+  },
+  "autoload": {
+    "psr-4": { "Auburnite\\Contracts\\": "" },
+    "files": [],
+    "exclude-from-classmap": [
+      "**/Tests/"
+    ]
+  },
+  "minimum-stability": "dev",
+  "extra": {
+    "branch-alias": {
+      "dev-main": "0.1-dev"
+    }
+  },
+  "prefer-stable": true
+}

@@ -5,6 +5,6 @@ Doctrine DBAL.
 
 ### Resources
 
-* [Report issues](https://github.com/auburnite/auburnite/issues) and
-  [send Pull Requests](https://github.com/auburnite/auburnite/pulls)
-  in the [main Auburnite repository](https://github.com/auburnite/auburnite)
+* [Report issues](https://github.com/Auburnite/Auburnite/issues) and
+  [send Pull Requests](https://github.com/Auburnite/Auburnite/pulls)
+  in the [main Auburnite repository](https://github.com/Auburnite/Auburnite)
