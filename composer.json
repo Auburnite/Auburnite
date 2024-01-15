@@ -39,8 +39,7 @@
         "auburnite/contracts": "self.version",
         "auburnite/exception-contracts": "self.version",
         "auburnite/exceptions": "self.version",
-        "auburnite/melketa": "self.version",
-        "symfony/exception-contracts": "self.version"
+        "auburnite/melketa": "self.version"
     },
     "config": {
         "sort-packages": true
