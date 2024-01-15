@@ -23,8 +23,8 @@ jobs:
                         split_repository: 'Exception'
                     -   local_path: 'Contracts/Exception'
                         split_repository: 'ExceptionContract'
-#                    -   local_path: 'Contracts'
-#                        split_repository: 'Contracts'
+                    -   local_path: 'Contracts'
+                        split_repository: 'Contracts'
 
         steps:
             -   uses: actions/checkout@v3

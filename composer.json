@@ -6,7 +6,7 @@
     "authors": [
         {
             "name": "Jordan Wamser",
-            "email": "jwamser@redpandacoding.com"
+            "email": "jmwamser@redpandacoding.com"
         }
     ],
     "require": {
@@ -23,20 +23,24 @@
     "autoload": {
         "exclude-from-classmap": [
             "src/Auburnite/Component/Exception/Tests/",
-            "src/Auburnite/Component/Melketa/Tests/"
+            "src/Auburnite/Component/Melketa/Tests/",
+            "src/Auburnite/Contracts/**/Tests/"
         ],
         "psr-4": {
             "Auburnite\\Bundle\\": "src/Auburnite/Bundle/",
             "Auburnite\\Component\\": "src/Auburnite/Component/",
             "Auburnite\\Component\\Exception\\": "src/Auburnite/Component/Exception/",
             "Auburnite\\Component\\Malketa\\": "src/Auburnite/Component/Melketa/",
+            "Auburnite\\Contracts\\": "src/Auburnite/Contracts/",
             "Auburnite\\Contracts\\Exception\\": "src/Auburnite/Contracts/Exception/"
         }
     },
     "replace": {
+        "auburnite/contracts": "self.version",
         "auburnite/exception-contracts": "self.version",
         "auburnite/exceptions": "self.version",
-        "auburnite/melketa": "self.version"
+        "auburnite/melketa": "self.version",
+        "symfony/exception-contracts": "self.version"
     },
     "config": {
         "sort-packages": true

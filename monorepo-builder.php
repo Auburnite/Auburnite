@@ -11,7 +11,8 @@ return static function (MBConfig $mbConfig): void {
     $mbConfig->packageDirectories(array_merge(
         glob(__DIR__."/src/Auburnite/Component/*", GLOB_ONLYDIR | GLOB_NOSORT),
         glob(__DIR__."/src/Auburnite/Bundle/*", GLOB_ONLYDIR | GLOB_NOSORT),
-        glob(__DIR__."/src/Auburnite/Contracts/*", GLOB_ONLYDIR | GLOB_NOSORT)
+        glob(__DIR__."/src/Auburnite/Contracts/*", GLOB_ONLYDIR | GLOB_NOSORT),
+        glob(__DIR__."/src/Auburnite/Contracts", GLOB_ONLYDIR | GLOB_NOSORT)
     ));
     //Data to Add, after merge
     $mbConfig->dataToAppend([
