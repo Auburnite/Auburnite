@@ -10,6 +10,7 @@ on:
 jobs:
     packages_split:
         runs-on: ubuntu-latest
+        environment: MonorepoSplit
 
         strategy:
             fail-fast: false
@@ -29,7 +30,7 @@ jobs:
                 uses: "symplify/monorepo-split-github-action@main"
                 env:
                     # 1. for Github split
-                    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                    GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
                 with:
                     branch: '0.1'
                     # ↓ split "packages/easy-coding-standard" directory
@@ -52,7 +53,7 @@ jobs:
                 uses: "symplify/monorepo-split-github-action@main"
                 env:
                     # 1. for Github split
-                    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                    GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
                 with:
                     tag: ${GITHUB_REF#refs/tags/}
 
