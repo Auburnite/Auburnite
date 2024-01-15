@@ -11,6 +11,8 @@
     ],
     "require": {
         "php": ">=8.2",
+        "ext-pdo": "*",
+        "doctrine/dbal": "^3.7",
         "symfony/polyfill-php82": "^1.28",
         "symfony/polyfill-php83": "^1.28"
     },
@@ -20,19 +22,27 @@
     },
     "autoload": {
         "exclude-from-classmap": [
+            "src/Auburnite/Component/Exception/Tests/",
             "src/Auburnite/Component/Melketa/Tests/"
         ],
         "psr-4": {
             "Auburnite\\Bundle\\": "src/Auburnite/Bundle/",
             "Auburnite\\Component\\": "src/Auburnite/Component/",
-            "Auburnite\\Component\\Malketa\\": "src/Auburnite/Component/Melketa/"
+            "Auburnite\\Component\\Exception\\": "src/Auburnite/Component/Exception/",
+            "Auburnite\\Component\\Malketa\\": "src/Auburnite/Component/Melketa/",
+            "Auburnite\\Contracts\\Exception\\": "src/Auburnite/Contracts/Exception/"
         }
     },
     "replace": {
+        "auburnite/exception-contracts": "self.version",
+        "auburnite/exceptions": "self.version",
         "auburnite/melketa": "self.version"
     },
     "config": {
         "sort-packages": true
+    },
+    "provide": {
+        "auburnite/exception-implementation": "0.1"
     },
     "minimum-stability": "dev",
     "prefer-stable": true

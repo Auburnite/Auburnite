@@ -17,9 +17,14 @@ jobs:
             matrix:
                 # define package to repository map
                 package:
-                    -
-                        local_path: 'Component/Melketa'
+                    -   local_path: 'Component/Melketa'
                         split_repository: 'Melketa'
+                    -   local_path: 'Component/Exception'
+                        split_repository: 'Exception'
+                    -   local_path: 'Contracts/Exception'
+                        split_repository: 'ExceptionContract'
+#                    -   local_path: 'Contracts'
+#                        split_repository: 'Contracts'
 
         steps:
             -   uses: actions/checkout@v3

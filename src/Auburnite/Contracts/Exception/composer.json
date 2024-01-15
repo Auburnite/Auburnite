@@ -1,0 +1,26 @@
+{
+    "name": "auburnite/exception-contracts",
+    "description": "Generic Exception put into Auburnite namespace.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jordan Wamser",
+            "email": "jwamser@redpandacoding.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.2"
+    },
+    "autoload": {
+        "psr-4": { "Auburnite\\Contracts\\Exception\\": "" }
+    },
+    "require-dev": {},
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.1-dev"
+        }
+    }
+}

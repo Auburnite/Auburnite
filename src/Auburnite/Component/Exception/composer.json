@@ -1,0 +1,33 @@
+{
+    "name": "auburnite/exceptions",
+    "description": "Generic Exception put into Auburnite namespace.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jordan Wamser",
+            "email": "jwamser@redpandacoding.com"
+        }
+    ],
+    "provide": {
+        "auburnite/exception-implementation": "0.1"
+    },
+    "require": {
+        "php": ">=8.2"
+    },
+    "autoload": {
+        "psr-4": { "Auburnite\\Component\\Exception\\": "" },
+        "classmap": [],
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "require-dev": {},
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.1-dev"
+        }
+    }
+}
