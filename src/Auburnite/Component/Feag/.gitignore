@@ -3,6 +3,3 @@ coverage
 phpunit.xml
 vendor/
 composer.lock
-CommandAliasTypes.lock
-Type
-config.php
