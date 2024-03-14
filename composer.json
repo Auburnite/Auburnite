@@ -12,17 +12,27 @@
     "require": {
         "php": ">=8.2",
         "ext-pdo": "*",
+        "ext-pdo_sqlsrv": "*",
+        "ext-readline": "*",
+        "ext-sqlsrv": "*",
         "doctrine/dbal": "^3.7",
+        "psr/simple-cache": "^3.0",
+        "symfony/console": "^6.4|^7.0",
+        "symfony/dependency-injection": "^6.4|^7.0",
         "symfony/polyfill-php82": "^1.28",
         "symfony/polyfill-php83": "^1.28"
     },
     "require-dev": {
+        "phpunit/phpunit": "^11.0",
         "symfony/filesystem": "^6.4|^7.0",
+        "symfony/maker-bundle": "^1.54",
+        "symfony/var-dumper": "^7.0",
         "symplify/monorepo-builder": "^11.2"
     },
     "autoload": {
         "exclude-from-classmap": [
             "src/Auburnite/Component/Exception/Tests/",
+            "src/Auburnite/Component/Feag/Tests/",
             "src/Auburnite/Component/Melketa/Tests/",
             "src/Auburnite/Contracts/**/Tests/"
         ],
@@ -30,15 +40,23 @@
             "Auburnite\\Bundle\\": "src/Auburnite/Bundle/",
             "Auburnite\\Component\\": "src/Auburnite/Component/",
             "Auburnite\\Component\\Exception\\": "src/Auburnite/Component/Exception/",
+            "Auburnite\\Component\\Feag\\": "src/Auburnite/Component/Feag/",
             "Auburnite\\Component\\Malketa\\": "src/Auburnite/Component/Melketa/",
             "Auburnite\\Contracts\\": "src/Auburnite/Contracts/",
             "Auburnite\\Contracts\\Exception\\": "src/Auburnite/Contracts/Exception/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Auburnite\\Component\\Feag\\Test\\": "src/Auburnite/Component/Feag/Tests/",
+            "Auburnite\\Component\\Malketa\\Tests\\": "src/Auburnite/Component/Melketa/Tests/"
         }
     },
     "replace": {
         "auburnite/contracts": "self.version",
         "auburnite/exception-contracts": "self.version",
         "auburnite/exceptions": "self.version",
+        "auburnite/feag": "self.version",
         "auburnite/melketa": "self.version"
     },
     "config": {
