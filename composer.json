@@ -17,6 +17,7 @@
         "ext-sqlsrv": "*",
         "doctrine/dbal": "^3.7",
         "psr/simple-cache": "^3.0",
+        "ramsey/collection": "^2.0",
         "symfony/console": "^6.4|^7.0",
         "symfony/dependency-injection": "^6.4|^7.0",
         "symfony/polyfill-php82": "^1.28",
