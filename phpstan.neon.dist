@@ -1,0 +1,9 @@
+parameters:
+    level: 5
+    paths:
+        - src/
+    excludePaths:
+        - src/**/Tests/
+        - *.tpl.php
+includes:
+    - phpstan-baseline.neon

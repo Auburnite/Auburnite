@@ -6,6 +6,7 @@ phpunit.xml
 .php-cs-fixer.php
 .phpunit.result.cache
 .phpmd.result-cache.php
+.phpstan.neon
 composer.phar
 package.tar
 /packages.json
